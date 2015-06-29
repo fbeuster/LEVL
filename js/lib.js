@@ -5,6 +5,17 @@
  */
 
 levl.lib = {
+  hasParent: function(node, tag) {
+    node = node.parentNode;
+
+    while (node !== null) {
+      if (node.nodeName.toLowerCase() === tag) return true;
+      node = node.parentNode;
+    }
+
+    return false;
+  },
+
   isModernBrowser: function() {
     return window.getSelection;
   }

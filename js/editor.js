@@ -87,11 +87,14 @@ levl.editor = {
         tempNode    = document.createElement('div'),
         openTag     = '<' + args.tag + '>',
         closeTag     = '</' + args.tag + '>';
-    tempNode.innerHTML = pre + openTag + selection + closeTag + post;
 
-    while(tempNode.firstChild) {
-      parentNode.insertBefore(tempNode.firstChild, args.textNode);
+    if (!levl.lib.hasParent(args.textNode, args.tag)) {
+      tempNode.innerHTML = pre + openTag + selection + closeTag + post;
+
+      while(tempNode.firstChild) {
+        parentNode.insertBefore(tempNode.firstChild, args.textNode);
+      }
+      parentNode.removeChild(args.textNode);
     }
-    parentNode.removeChild(args.textNode);
   }
 };
