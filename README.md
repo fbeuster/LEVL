@@ -5,7 +5,7 @@ Live edit and view for Lixter (short: LEVL) is a live HTML text editor, also kno
 
 > **Note:** This project is in early development and might miss a few feature. Not might, it does.
 
-Check the demo folder to see LEVL in action and how to use it.
+If you're looking for a demo, check out the [page that I set up here](http://demos.beusterse.de/levl.html).
 
 If you want to combine the JavaScript files, I recommend [JS Build](https://github.com/fbeuster/js-build)
 
