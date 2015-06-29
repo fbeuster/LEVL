@@ -54,7 +54,7 @@ levl.editor = {
 
   getSelectedText: function() {
     var sel = levl.editor.getSelection();
-    if (levl.editor.isModernBrowser()) {
+    if (levl.lib.isModernBrowser()) {
       return sel.toString();
     } else if (document.selection && document.selection.type != 'Control') {
       return sel.text;
@@ -62,7 +62,7 @@ levl.editor = {
   },
 
   getSelection: function() {
-    if (levl.editor.isModernBrowser()) {
+    if (levl.lib.isModernBrowser()) {
       return window.getSelection();
     } else if (document.selection && document.selection.type != 'Control') {
       return document.selection.createRange();
@@ -71,10 +71,6 @@ levl.editor = {
 
   getRange: function() {
     return levl.editor.getSelection().getRangeAt(0);
-  },
-
-  isModernBrowser: function() {
-    return window.getSelection;
   },
 
   isSingleNode: function() {

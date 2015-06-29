@@ -4,12 +4,8 @@
  * All rights reserved.
  */
 
-var levl = levl || {};
-
-//@ lib
-//@ converter
-//@ editor
-
-$(document).ready(function(){
-  levl.editor.init();
-});
+levl.lib = {
+  isModernBrowser: function() {
+    return window.getSelection;
+  }
+}
